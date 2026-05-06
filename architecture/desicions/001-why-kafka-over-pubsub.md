@@ -1,4 +1,3 @@
-<img width="1190" height="680" alt="image" src="https://github.com/user-attachments/assets/7e89f203-3119-481b-acd9-48df3569d398" />
 #### Overview on Google Cloud pubsub vs kafka - 06/05/2026
 pub sub is an architecture that aims to solve synchronous message passing problem. The receiver asks for a service from the sender and the sender serves a request and waits for requester acknowledgement. If the sender is waiting for acknowledgement then the sender is blocked from serving others.
 
