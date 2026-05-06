@@ -1,0 +1,19 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# Virtual environment
+venv/
+data_platform_env/
+# Python cache
+__pycache__/
+*.pyc
+
+# Database
+*.db
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# environment variables
+.env
