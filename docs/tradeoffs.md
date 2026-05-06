@@ -1,0 +1,1 @@
+tradeoffs to highlight thinking
