@@ -1,5 +1,5 @@
-
-#### Overview on pubsub vs kafka - 06/05/2026
+<img width="1190" height="680" alt="image" src="https://github.com/user-attachments/assets/7e89f203-3119-481b-acd9-48df3569d398" />
+#### Overview on Google Cloud pubsub vs kafka - 06/05/2026
 pub sub is an architecture that aims to solve synchronous message passing problem. The receiver asks for a service from the sender and the sender serves a request and waits for requester acknowledgement. If the sender is waiting for acknowledgement then the sender is blocked from serving others.
 
 The Pub/Sub model is a messaging pattern where a message broker routes messages from publishers to subscribers based on subscriptions, ensuring scalable and reliable delivery.
@@ -93,4 +93,32 @@ With Pub/Sub, subscribers can change their interests at runtime. They can subscr
 - Exactly-once Delivery
 - Latency
 - Complexity
+
+#### KAFKA
+
+Kafka is a distributed event store and stream-processing platform. Open-source system. 
+
+Rule of Thumb:
+- Choose Kafka i fyou need real-time streaming, replay, rich integrations and cross-cloud flexibility.
+- Choose Pub/Sub if you want simple, reliable, cloud-native messaging inside Google Cloud with zero management
+
+#### COMPARISONS OF USE CASES - SPOTIFY USE CASE (EVENT DELIVERY)
+
+<img width="1190" height="680" alt="image" src="https://github.com/user-attachments/assets/ea901a45-6169-4837-8354-bf0499487a09" />
+
+## Choice of reliable and persistent queue
+| Kafka | Pub/Sub |
+|-------|---------|
+| Real-time Analysis  | Event delivery System|
+| Data Replay | Highly Structured Format taking load off ETL process|
+| Production traffic caused issues | Global availabiity using underlying Google network|
+| Issue with Kafka Mirror Maker being confused on consumnption leader and mirroring between data centers would stop | |
+| restart service on breakdown | Simple REST API providing access own custom client library |
+| Operational responsibility needs to be managed| Operational responsibility was handled by someone else—there was no need to create a capacity model or deployment strategy, or to set up monitoring and alerting.|
+
+##  Decision - Google Pub/Sub
+- Latency was low and consistent
+- capacity limitation was the one explicitly set by the available quota.
+
+
 
