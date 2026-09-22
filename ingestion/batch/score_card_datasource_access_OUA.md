@@ -11,7 +11,7 @@ Process map for accessing NWL's main oracle environment.
 
 This process applies to:
 
-- [OUA]
+- [Environments: OUA]
 - [Datasets: CC&B, MIPS, LIMS, MAXIMO]
 
 ---
